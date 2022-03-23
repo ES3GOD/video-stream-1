@@ -14,11 +14,19 @@ SESSION_NAME = getenv("SESSION_NAME", "session")
 OWNER_USERNAME = getenv("OWNER_USERNAME")
 ALIVE_NAME = getenv("ALIVE_NAME")
 BOT_USERNAME = getenv("BOT_USERNAME")
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/levina-lab/video-stream")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/ES3GOD/video-stream-1")
 UPSTREAM_BRANCH = getenv("UPSTREM_BRANCH", "main")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "60"))
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "VeezSupportGroup")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "levinachannel")
+
+# Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
+
+# Time after which you're assistant account will leave chats automatically.
+AUTO_LEAVE_ASSISTANT_TIME = int(
+    getenv("ASSISTANT_LEAVE_TIME", "5400")
+)  # Remember to give value in Seconds
 
 # database, decorators, handlers mandatory vars
 MONGODB_URL = getenv("MONGODB_URL")
