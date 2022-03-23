@@ -19,7 +19,6 @@ async def auto_leave():
                         if chat_type in [
                             "supergroup",
                             "group",
-                            "channel",
                         ]:
                             chat_id = i.chat.id
                             if (
